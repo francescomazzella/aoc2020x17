@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conway's Blocks visualizer - AOC 2020x17</title>
+</head>
+
+<body>
+    <div id="info">
+        <span style="white-space: nowrap;">Conway's Blocks visualizer</span>
+        <span style="white-space: nowrap;">for <a href="https://adventofcode.com/2020/">Advent Of Code</a> 2020, Day 17</span><br>
+        By <a href="https://mazzella.dev/">Francesco Mazzella</a>
+    </div>
+    <div class="puzzle-input-container">
+        <span>Your input</span>
+        <pre id="puzzle-input" contenteditable="true" class="puzzle-input">...#.#.#
+..#..#..
+#.#.##.#
+###.##..
+#####.##
+#.......
+#..#..##
+...##.##</pre>
+        <button id="puzzle-input-send">Send</button>
+    </div>
+    <div class="controls-container">
+        <div id="working-indicator">Working&hellip;</div>
+        <button id="step-button">Step</button>
+        <button id="reset-button">Reset</button>
+        <fieldset style="margin-bottom: 8px;">
+            <legend>Status</legend>
+            <table>
+                <tbody>
+                    <tr><td>Current cycle:&nbsp;</td><td id="current-cycle">......</td></tr>
+                    <tr><td>Currently active:&nbsp;</td><td id="currently-active">......</td></tr>
+                </tbody>
+            </table>
+        </fieldset>
+        <fieldset name="mode" id="mode-fieldset" style="margin-bottom: 8px;">
+            <legend>Mode</legend>
+            <label><input type="radio" name="mode" value="3d" checked />3D</label>
+            <label><input type="radio" name="mode" value="4d" />4D</label>
+        </fieldset>
+        <div id="w-selector-container" style="display: none;">
+            Current W: <input id="w-selector" type="number" maxlength="5" value="0" />
+        </div>
+    </div>
+    <script type="module" src="./js/app.js"></script>
+    <!-- <script src="js/simulation.js"></script> -->
+</body>
+
+</html>

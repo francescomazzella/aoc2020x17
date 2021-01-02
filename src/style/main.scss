@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+  font-family: monospace;
+  text-align: center;
+  font-size: 13px;
+  line-height: 24px;
+  overscroll-behavior: none;
+  overflow: hidden;
+}
+
+#info {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  z-index: 1;
+
+  a {
+    color: #ff0;
+    text-decoration: none;
+    &:hover, &:active {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #info {
+    text-align: right;
+  }
+}
+
+a, button, input, select {
+  pointer-events: auto;
+  font-family: monospace;
+}
+
+input[type="text"], input[type="number"], textarea {
+  border: 2px solid white;
+  border-radius: 0;
+  background: none;
+  color: white;
+}
+
+button {
+  background: none;
+  color: white;
+  border-radius: 0;
+  border: 4px double white;
+  padding: 6px 14px;
+  font-size: large;
+}
+
+.puzzle-input-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 4px;
+
+  .puzzle-input {
+    margin: 0 0 4px 0;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    border: 2px solid white;
+  }
+}
+
+.controls-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 8px;
+  pointer-events: none;
+
+  label {
+    display: inline-flex;
+  }
+
+  fieldset {
+    border-style: solid;
+    border-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  button, input {
+    pointer-events: auto;
+  }
+}
+
+input[type="radio"] {
+  background: none;
+  border: 2px solid white;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &:checked::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    background-color: white;
+    border-radius: 50%;
+  }
+}
+
+#w-selector {
+  width: 48px;
+}
